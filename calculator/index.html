@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <h1>Bobby's Calculator</h1>
+
+ <div class="all-holder">
+    <div class="input-holder">
+    <input type="text" placeholder="Input" id="fnum">
+    <input type="text" placeholder="Input" id="snum">
+    </div>
+    <p id=result></p>
+    <div class="btn-holder">
+    <button onclick="sum()">+</button>
+    <button onclick="remove()">-</button>
+    <button onclick="multiply()">*</button>
+    <button onclick="divide()">/</button>
+    </div>
+   
+
+ </div>
+    <script>
+document.getElementById('forward').addEventListener('click', function(){
+    history.forward()
+})
+
+
+function sum(){
+    var num1= parseInt(document.getElementById('fnum').value)
+    var num2= parseInt( document.getElementById('snum').value)
+    var result= num1 + num2
+    document.getElementById('result').innerHTML = result
+}
+
+function remove(){
+    var num1= parseInt(document.getElementById('fnum').value)
+    var num2= parseInt( document.getElementById('snum').value)
+    var result= num1 - num2
+    document.getElementById('result').innerHTML = result
+}
+function multiply(){
+    var num1= parseInt(document.getElementById('fnum').value)
+    var num2= parseInt( document.getElementById('snum').value)
+    var result= num1 * num2
+    document.getElementById('result').innerHTML = result
+}
+function divide(){
+    var num1= parseInt(document.getElementById('fnum').value)
+    var num2= parseInt( document.getElementById('snum').value)
+    var result= num1 / num2
+    document.getElementById('result').innerHTML = result
+}
+    </script>
+
+    
+</body>
+</html>
